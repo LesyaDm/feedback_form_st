@@ -1,0 +1,29 @@
+
+<div class="feedback">
+  <form class="feedback__form form" #form="ngForm"  (ngSubmit)="addRequest()" [formGroup]="formCheck">
+    <div class="form__title">Напишите нам</div>
+    <div class="form__questionnaire questionnaire">
+       <div for="name" class="questionnaire__question">Ваше имя:</div>
+      <input type="text" class="questionnaire__text" id="name" name ="name" [(ngModel)] = "contact.ContactName" formControlName = 'name' [ngClass]="{validation:(name&&name.invalid&&name.touched)}">
+
+      <div for="email" class="questionnaire__question">Ваш Email:</div>
+      <input type="email" class="questionnaire__text" id="email" name ="email" [(ngModel)] = "contact.ContactEmail" formControlName = 'email' [ngClass]="{validation:(email&&email.invalid&&email.touched)}">
+
+      <div for="phone" class="questionnaire__question">Ваш телефон:</div>
+      <input type="text" class="questionnaire__text" id="phone" name ="phone" [(ngModel)] = "contact.ContactPhone" formControlName = 'phone' [ngClass]="{validation:(phone&&phone.invalid&&phone.touched)}">
+
+      <div class="questionnaire__question">Тема:</div>
+      <select name="topicId" id="topicId" class="questionnaire__text" [(ngModel)] = "message.TopicId" formControlName = 'topic' [ngClass]="{validation:topic && topic.touched && !topic.dirty}">
+        <option *ngFor="let topic of topicList$|async" [value]="topic.id">{{topic.topicName}}</option>
+      </select>
+
+      <div for="message" class="questionnaire__question">Ваше сообщение:</div>
+      <textarea name="message" id="message" cols="30" rows="4" class="questionnaire__text" name ="message" [(ngModel)] = "message.MessageText" formControlName = 'mes' [ngClass]="{validation:(mes&&mes.invalid&&mes.touched)}"></textarea> 
+      <ngx-recaptcha2 class="questionnaire__captcha" #captchaElem [siteKey]="siteKey" formControlName = 'captcha' [ngClass]="{validation:captcha&&captcha.invalid&&captcha.touched}"></ngx-recaptcha2>
+    </div>
+    
+
+    <button type="submit" class="form__button" [disabled]="formCheck.invalid">Отправить письмо!</button>
+  </form>
+
+</div>   

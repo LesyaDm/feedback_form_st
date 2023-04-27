@@ -1,0 +1,15 @@
+$light-gray: #dcdcdc;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body, html{
+    font-family: 'Open Sans', sans-serif;
+    background-color: $light-gray;
+  }
+
+
+app-root{
+  display: flex;
+  justify-content: center;
+}
