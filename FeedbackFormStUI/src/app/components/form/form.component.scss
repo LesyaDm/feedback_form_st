@@ -104,3 +104,27 @@ $dark-red: #691d16;
 .validation{
   border-color: $red;
 }
+
+.contact{
+  background-image: url('../../../assets/img/person-in-tuxedo_1f935.png');   
+  background-repeat: no-repeat; 
+  background-position: 5px;
+  background-size: 20px;
+  padding-left: 30px;
+}
+
+.email{
+  background-image: url('../../../assets/img/envelope_2709-fe0f.png');   
+  background-repeat: no-repeat; 
+  background-position: 5px;
+  background-size: 20px;
+  padding-left: 30px;
+}
+
+.phone{
+  background-image: url('../../../assets/img/telephone_260e-fe0f.png');   
+  background-repeat: no-repeat; 
+  background-position: 5px;
+  background-size: 20px;
+  padding-left: 30px;
+}

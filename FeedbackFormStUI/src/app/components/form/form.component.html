@@ -4,13 +4,13 @@
     <div class="form__title">Напишите нам</div>
     <div class="form__questionnaire questionnaire">
        <div for="name" class="questionnaire__question">Ваше имя:</div>
-      <input type="text" class="questionnaire__text" id="name" name ="name" [(ngModel)] = "contact.ContactName" formControlName = 'name' [ngClass]="{validation:(name&&name.invalid&&name.touched)}">
+      <input type="text" class="questionnaire__text contact" id="name" name ="name" [(ngModel)] = "contact.ContactName" formControlName = 'name' [ngClass]="{validation:(name&&name.invalid&&name.touched)}">
 
       <div for="email" class="questionnaire__question">Ваш Email:</div>
-      <input type="email" class="questionnaire__text" id="email" name ="email" [(ngModel)] = "contact.ContactEmail" formControlName = 'email' [ngClass]="{validation:(email&&email.invalid&&email.touched)}">
+      <input type="email" class="questionnaire__text email" id="email" name ="email" [(ngModel)] = "contact.ContactEmail" formControlName = 'email' [ngClass]="{validation:(email&&email.invalid&&email.touched)}">
 
       <div for="phone" class="questionnaire__question">Ваш телефон:</div>
-      <input type="text" class="questionnaire__text" id="phone" name ="phone" [(ngModel)] = "contact.ContactPhone" formControlName = 'phone' [ngClass]="{validation:(phone&&phone.invalid&&phone.touched)}">
+      <input type="text" class="questionnaire__text phone" id="phone" name ="phone" [(ngModel)] = "contact.ContactPhone" formControlName = 'phone' [ngClass]="{validation:(phone&&phone.invalid&&phone.touched)}">
 
       <div class="questionnaire__question">Тема:</div>
       <select name="topicId" id="topicId" class="questionnaire__text" [(ngModel)] = "message.TopicId" formControlName = 'topic' [ngClass]="{validation:topic && topic.touched && !topic.dirty}">
